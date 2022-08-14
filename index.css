@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --design-font-clr: hsl(167, 40%, 24%);
+  --photography-font-clr: hsl(198, 62%, 26%);
+  --footer-font-clr: hsl(168, 34%, 41%);
+
+  --desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-gray-blue: hsl(213, 9%, 39%);
+  --dark-gray-blue: hsl(232, 10%, 55%);
+  --gray-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  --ff-body: 'Barlow', sans-serif;
+  --ff-header: 'Fraunces', serif;
+
+  --fs-body: 1.125rem;
+
+  --spacer-sm: 0.5rem;
+  --spacer: 1rem;
+  --spacer-md: 2rem;
+}
+
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: var(--ff-header);
+  color: var(--white);
+  letter-spacing: var(--spacer-sm);
+  font-weight: var(--fw-black);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+header {
+  background: url('./images/mobile/image-header.jpg') no-repeat;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo img {
+  display: flex;
+  padding: var(--spacer-md) var(--spacer);
+}
+
+/* navigation */
+
+.primary-nav {
+  position: relative;
+  background-color: var(--white);
+  margin: var(--spacer) auto;
+  width: 80%;
+}
+
+.primary-nav ul {
+  display: none;
+  height: 40vh;
+}
+
+.primary-nav.open ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.primary-nav::before {
+  display: none;
+}
+
+.primary-nav.open::before {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  right: 0;
+  top: -2rem;
+  position: absolute;
+  border-bottom: 50px solid var(--white);
+  border-left: 50px solid transparent;
+}
+
+.primary-nav ul li{
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.primary-nav ul li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-gray-blue);
+  flex-basis: 100%;
+}
+
+
+.nav-toggle {
+  display: block;
+  padding: 1rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: ' ';
+  display: block;
+  width: 1.5rem;
+  height: 3px;
+  background: var(--white);
+  transition: all ease-in-out 250ms;
+}
+
+.hamburger::before{
+  transform: translateY(-6px);
+}
+
+.hamburger::after{
+  transform: translateY(3px);
+}
+
+.hamburger.open {
+  transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+  transform: rotate(-90deg);
+}
+
+.hamburger.open::before{
+  display: none;
+}
+
+/* end of navigation */
