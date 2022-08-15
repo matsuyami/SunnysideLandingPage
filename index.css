@@ -92,6 +92,7 @@ a {
 
 .logo {
   background-color: transparent;
+  max-width: 50%;
 }
 
 .logo img {
