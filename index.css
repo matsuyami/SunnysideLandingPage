@@ -387,7 +387,7 @@ section p {
 
 .decorative-images img{
   object-fit: cover;
-  max-width: 100%;
+  width: 100%;
 }
 
 footer {
@@ -564,6 +564,7 @@ footer a {
   .graphic-design{
     background: url('./images/desktop/image-graphic-design.jpg') no-repeat;
     min-height: 90vh;
+    width: 50vw;
   }
 
   .graphic-design p {
